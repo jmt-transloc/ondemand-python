@@ -7,8 +7,8 @@ Python, Pytest, and Selenium.
 3. [Troubleshooting](#troubleshooting)
 
 ## Installation
-To begin running tests, simply ensure that your TransLoc virtual environment has up to date Python
-dependencies by installing via `/python/requirements.txt`, then install Chromedriver:
+To begin running tests, simply ensure that your virtual environment has up to date Python
+dependencies by installing via `./requirements.txt`, then install Chromedriver:
 ```
 webdriverdownloader chrome
 ```
@@ -25,8 +25,7 @@ Then save and exit. Once done, source the profile: `source ~/.bash_profile`
 
 ## Running Tests
 In order to run automation tests, a `.env` file must be created within the 
-`/python/tests/automation/` root. Contact a QA engineer in order to obtain the values for each 
-field. Your `.env` file should resemble the following:
+project root. Your `.env` file should resemble the following:
 
 ```
 AGENCY=imperialdemo
@@ -58,7 +57,7 @@ Pytest will automatically run against the `.env` file using the pytest-dotenv pl
 Pytest will run tests headlessly unless "headed" is inserted into the BROWSER variable or passed as
 a command line argument.
 
-From your terminal inside of the `/python/tests/automation/` root, input the following:
+From your terminal inside of the project root, input the following:
 
 ```
 pytest
