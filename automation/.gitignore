@@ -1,0 +1,6 @@
+.coverage
+.env
+.mypy_cache
+geckodriver.log
+output/
+*.code-workspace
