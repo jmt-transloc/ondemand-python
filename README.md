@@ -1,12 +1,13 @@
-# Atlas Automation Testing
-An automation testing repository for Atlas' applications using Python, Pytest, and Selenium.
+# TransLoc OnDemand Automation Testing
+An automation testing repository for TransLoc's OnDemand and Authentication applications using 
+Python, Pytest, and Selenium.
 
 1. [Installation](#installation)
 2. [Running Tests](#running-tests)
 3. [Troubleshooting](#troubleshooting)
 
 ## Installation
-To begin running tests, simply ensure that your Transloc virtual environment has up to date Python
+To begin running tests, simply ensure that your TransLoc virtual environment has up to date Python
 dependencies by installing via `/python/requirements.txt`, then install Chromedriver:
 ```
 webdriverdownloader chrome
@@ -23,9 +24,10 @@ export PATH=$PATH:/Users/{your_terminal_name}/bin
 Then save and exit. Once done, source the profile: `source ~/.bash_profile`
 
 ## Running Tests
-In order to run automation tests, a `.env` file must be created within the `/python/tests/automation/`
-root. Contact a QA engineer in order to obtain the values for each field. Your `.env` file should
-resemble the following:
+In order to run automation tests, a `.env` file must be created within the 
+`/python/tests/automation/` root. Contact a QA engineer in order to obtain the values for each 
+field. Your `.env` file should resemble the following:
+
 ```
 AGENCY=imperialdemo
 ENV=dev
@@ -79,15 +81,6 @@ TEAM - "bloop", "kraken", mamlambo", "thunderbird"
 
 All other values are not validated. In order to avoid errors, ensure that you input valid entries
 for both AGENCY and PORT.
-
-### Running Tests using Makefile
-To run tests using the Transloc Makefile, simply input the following from the `transloc/` root:
-```
-make testui
-```
-
-The Makefile will run all tests within the automation battery using four parallel runners. An html
-report will generate upon completion at `/python/tests/automation/output/`.
 
 ### Running Tests using Localhost
 To run against local, set the ENV to "localhost" and provide a port to listen in to. Once modified,
@@ -160,13 +153,13 @@ which python
 #### Verify your virtualenv is using Pyenv as the source
 Run the following command:
 ```
-source ~/{virtualenv_directory}/transloc/bin/activate
+source ~/{virtualenv_directory}/{project}/bin/activate
 which python
 ```
 
 If properly sourced and installed, the readout should print the following in your terminal:
 
-`/Users/{user}/{virtualenv_directory}/transloc/bin/python`
+`/Users/{user}/{virtualenv_directory}/{project}/bin/python`
 
 If not, you will have to remove the existing virtual environment and proceed with a fresh virtual
 environment creation.
